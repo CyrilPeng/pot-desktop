@@ -1,6 +1,6 @@
 export const info = {
-    name: 'ollama',
-    icon: 'logo/ollama.png',
+    name: 'ai',
+    icon: 'logo/ai.svg',
 };
 
 export enum Language {

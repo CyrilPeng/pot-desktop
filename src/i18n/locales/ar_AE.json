@@ -54,14 +54,14 @@
                 "app_theme": "السمة",
                 "app_font": "الخط",
                 "font_size": {
-                    "12": "صغير جدا (١٢بكسل)",
                     "10": "بالغ الصغر (١٠بكسل)",
+                    "12": "صغير جدا (١٢بكسل)",
                     "14": "صغير (١٤بكسل)",
                     "16": "عادي (١٦بكسل)",
-                    "title": "حجم الخط",
-                    "20": "كبير جدا (٢٠بكسل)",
                     "18": "كبير (١٨بكسل)",
-                    "24": "بالغ الكبر (٢٤بكسل)"
+                    "20": "كبير جدا (٢٠بكسل)",
+                    "24": "بالغ الكبر (٢٤بكسل)",
+                    "title": "حجم الخط"
                 },
                 "default_font": "الافتراضي",
                 "theme": {
@@ -105,14 +105,14 @@
                 "delete_newline": "احذف السطر الجديد",
                 "remember_language": "تذكر اللغة المستهدفة",
                 "font_size": {
-                    "title": "حجم الخط",
                     "10": "صغير جدا جدا (١٠بكسل)",
                     "12": "صغير جدا (١٢بكسل)",
                     "14": "صغير (١٤بكسل)",
                     "16": "عادي (١٦بكسل)",
-                    "20": "كبير جدا (٢٠بكسل)",
                     "18": "كبير (١٨بكسل)",
-                    "24": "كبير جدا جدا (٢٤بكسل)"
+                    "20": "كبير جدا (٢٠بكسل)",
+                    "24": "كبير جدا جدا (٢٤بكسل)",
+                    "title": "حجم الخط"
                 },
                 "source_target": "المصدر+المستهدف",
                 "remember_window_size": "تذكر حجم النافذة",
@@ -276,51 +276,6 @@
                 "bing": {
                     "title": "Bing"
                 },
-                "ollama": {
-                    "title": "ollama",
-                    "install_ollama": "غير قادر على الاتصال بـ ollama المحلي، يرجى تنزيل ollama وتثبيته وبدء تشغيله أولاً. إذا كنت تستخدم ollama غير موجود على هذا الجهاز، يرجى تغيير عنوان الطلب.",
-                    "install_ollama_link": "حمل Ollama",
-                    "request_path": "مسار الطلب",
-                    "stream": "وضع البث",
-                    "install_model": "ثبت",
-                    "model": "النموذج",
-                    "ready": "جاهز",
-                    "not_installed": "لم يتم تثبيت هذا النموذج بعد، انقر للتحميل والتثبيت الآن",
-                    "supported_models": "انقر للاطلاع على قائمة نماذج Ollama المتاحة",
-                    "add": "اضف موجه",
-                    "prompt_description": "من خلال تخصيص الموجه يمكنك تخصيص سلوك الذكاء الاصطناعي. $text $from $to $detect سيتم استبدالها بالنص المراد ترجمته واللغة المصدر واللغة الهدف واللغة المكتشفة."
-                },
-                "openai": {
-                    "request_path": "مسار الطلب",
-                    "stream": "وضع البث",
-                    "prompt_description": "من خلال تخصيص الموجه يمكنك تخصيص سلوك OpenAI. $text $from $to $detect سيتم استبدالها بالنص المراد ترجمته واللغة المصدر واللغة الهدف واللغة المكتشفة.",
-                    "service": "مزود خدمة",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "api_key": "مفتاح Api",
-                    "model": "النموذج",
-                    "add": "اضف موجه",
-                    "title": "OpenAI"
-                },
-                "geminipro": {
-                    "request_path": "مسار الطلب",
-                    "stream": "وضع البث",
-                    "add": "اضف موجه",
-                    "api_key": "مفتاح Api",
-                    "title": "Gemini الاحترافية",
-                    "prompt_description": "من خلال تخصيص الموجه يمكنك تخصيص سلوك Gemini Pro. $text $from $to $detect سيتم استبدالها بالنص المراد ترجمته واللغة المصدر واللغة الهدف واللغة المكتشفة."
-                },
-                "chatglm": {
-                    "model": "النموذج",
-                    "title": "chatGLM",
-                    "chatglm_turbo": "ChatGLM فائق",
-                    "prompt_description": "من خلال تخصيص الموجه يمكنك تخصيص سلوك الذكاء الاصطناعي. $text $from $to $detect سيتم استبدالها بالنص المراد ترجمته واللغة المصدر واللغة الهدف واللغة المكتشفة.",
-                    "chatglm_pro": "ChatGLM احترافي",
-                    "add": "اضف موجه",
-                    "api_key": "مفتاح Api",
-                    "chatglm_std": "ChatGLM قياسي",
-                    "chatglm_lite": "ChatGLM خفيف"
-                },
                 "yandex": {
                     "title": "yandex"
                 },
@@ -385,6 +340,20 @@
                 "caiyun": {
                     "title": "سايون",
                     "token": "رمز"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "instance_name": "اسم التكوين",

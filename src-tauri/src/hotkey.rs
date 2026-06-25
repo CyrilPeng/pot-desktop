@@ -4,12 +4,18 @@ use crate::APP;
 use log::{info, warn};
 use tauri::{AppHandle, GlobalShortcutManager};
 
-fn register<F>(app_handle: &AppHandle, name: &str, handler: F, key: &str) -> Result<(), String>
+fn register<F>(
+    app_handle: &AppHandle,
+    name: &str,
+    handler: F,
+    new_key: &str,
+    old_key: &str,
+) -> Result<(), String>
 where
     F: Fn() + Send + 'static,
 {
     let hotkey = {
-        if key.is_empty() {
+        if new_key.is_empty() {
             match get(name) {
                 Some(v) => v.as_str().unwrap().to_string(),
                 None => {
@@ -18,9 +24,18 @@ where
                 }
             }
         } else {
-            key.to_string()
+            new_key.to_string()
         }
     };
+
+    // Unregister old shortcut if provided
+    if !old_key.is_empty() {
+        if let Err(e) = app_handle.global_shortcut_manager().unregister(old_key) {
+            warn!("Failed to unregister old shortcut: {} {:?}", old_key, e);
+        } else {
+            info!("Unregistered old shortcut: {} for {}", old_key, name);
+        }
+    }
 
     if !hotkey.is_empty() {
         match app_handle
@@ -48,22 +63,28 @@ pub fn register_shortcut(shortcut: &str) -> Result<(), String> {
             "hotkey_selection_translate",
             selection_translate,
             "",
+            "",
         )?,
         "hotkey_input_translate" => {
-            register(app_handle, "hotkey_input_translate", input_translate, "")?
+            register(app_handle, "hotkey_input_translate", input_translate, "", "")?
         }
-        "hotkey_ocr_recognize" => register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "")?,
-        "hotkey_ocr_translate" => register(app_handle, "hotkey_ocr_translate", ocr_translate, "")?,
+        "hotkey_ocr_recognize" => {
+            register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "", "")?
+        }
+        "hotkey_ocr_translate" => {
+            register(app_handle, "hotkey_ocr_translate", ocr_translate, "", "")?
+        }
         "all" => {
             register(
                 app_handle,
                 "hotkey_selection_translate",
                 selection_translate,
                 "",
+                "",
             )?;
-            register(app_handle, "hotkey_input_translate", input_translate, "")?;
-            register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "")?;
-            register(app_handle, "hotkey_ocr_translate", ocr_translate, "")?;
+            register(app_handle, "hotkey_input_translate", input_translate, "", "")?;
+            register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "", "")?;
+            register(app_handle, "hotkey_ocr_translate", ocr_translate, "", "")?;
         }
         _ => {}
     }
@@ -71,7 +92,11 @@ pub fn register_shortcut(shortcut: &str) -> Result<(), String> {
 }
 
 #[tauri::command]
-pub fn register_shortcut_by_frontend(name: &str, shortcut: &str) -> Result<(), String> {
+pub fn register_shortcut_by_frontend(
+    name: &str,
+    shortcut: &str,
+    old_shortcut: &str,
+) -> Result<(), String> {
     let app_handle = APP.get().unwrap();
     match name {
         "hotkey_selection_translate" => register(
@@ -79,19 +104,29 @@ pub fn register_shortcut_by_frontend(name: &str, shortcut: &str) -> Result<(), S
             "hotkey_selection_translate",
             selection_translate,
             shortcut,
+            old_shortcut,
         )?,
         "hotkey_input_translate" => register(
             app_handle,
             "hotkey_input_translate",
             input_translate,
             shortcut,
+            old_shortcut,
         )?,
-        "hotkey_ocr_recognize" => {
-            register(app_handle, "hotkey_ocr_recognize", ocr_recognize, shortcut)?
-        }
-        "hotkey_ocr_translate" => {
-            register(app_handle, "hotkey_ocr_translate", ocr_translate, shortcut)?
-        }
+        "hotkey_ocr_recognize" => register(
+            app_handle,
+            "hotkey_ocr_recognize",
+            ocr_recognize,
+            shortcut,
+            old_shortcut,
+        )?,
+        "hotkey_ocr_translate" => register(
+            app_handle,
+            "hotkey_ocr_translate",
+            ocr_translate,
+            shortcut,
+            old_shortcut,
+        )?,
         _ => {}
     }
     Ok(())

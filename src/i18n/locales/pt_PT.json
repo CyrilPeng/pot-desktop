@@ -28,29 +28,6 @@
                     "auth_key": "Chave de Autorização",
                     "custom_url": "URL de DeepLX"
                 },
-                "openai": {
-                    "openai": "OpenAI",
-                    "request_path": "Caminho do Pedido",
-                    "stream": "Modo de Stream",
-                    "service": "Prestador de serviços",
-                    "model": "Modelo",
-                    "add": "Adicionar Prompt",
-                    "prompt_description": "Ao personalizar o Prompt, pode personalizar o comportamento do OpenAI. $text $from $to $detet será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detetado.",
-                    "title": "OpenAI",
-                    "azure": "Azure",
-                    "api_key": "Api Key"
-                },
-                "chatglm": {
-                    "title": "ChatGLM",
-                    "api_key": "Chave Api",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "model": "Modelo",
-                    "chatglm_turbo": "ChatGLM Turbo",
-                    "chatglm_std": "ChatGLM Std",
-                    "add": "Adicionar Prompt",
-                    "prompt_description": "Ao personalizar o Prompt, pode personalizar o comportamento da IA. $text $from $to $detet será substituído pelo texto a ser traduzido, o idioma de origem, o idioma de destino e o idioma detetado."
-                },
                 "transmart": {
                     "username": "Nome de utilizador",
                     "title": "TranSmart",
@@ -118,30 +95,22 @@
                     "accesskey_id": "ID da Chave de Acesso",
                     "accesskey_secret": "Segredo da Chave de Acesso"
                 },
-                "geminipro": {
-                    "api_key": "Chave de Api",
-                    "stream": "Modo de Stream",
-                    "title": "Gemini Pro",
-                    "request_path": "Caminho de Solicitação",
-                    "prompt_description": "Ao personalizar o Prompt, pode personalizar o comportamento do Gemini Pro. $text $from $to $detet será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detetado.",
-                    "add": "Adicionar Prompt"
-                },
-                "ollama": {
-                    "title": "Ollama",
-                    "install_ollama": "Não foi possível conectar ao ollama local. Primeiro descarregue, instale e inicie o ollama. Se usar ollama que não está nesta máquina, altere o endereço da solicitação.",
-                    "install_ollama_link": "Descarregar Ollama",
-                    "request_path": "Caminho da Solicitação",
-                    "stream": "Modo Stream",
-                    "model": "Modelo",
-                    "install_model": "Instalar",
-                    "ready": "Pronto",
-                    "not_installed": "Este modelo ainda não foi instalado, clique para descarregar e instalar agora",
-                    "supported_models": "Clique para ver uma lista de modelos disponíveis da Ollama",
-                    "prompt_description": "Ao personalizar o Prompt, pode personalizar o comportamento da IA. $text $from $to $detect será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detetado.",
-                    "add": "Adicionar Prompt"
-                },
                 "ecdict": {
                     "title": "ECDict(Online)"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "recognize": {
@@ -298,13 +267,13 @@
                 },
                 "server_port_change": "A porta de escuta foi alterada. Reinicie a aplicação para que as alterações tenham efeito",
                 "font_size": {
-                    "20": "Muito Grande (20px)",
-                    "18": "Grande (18px)",
+                    "10": "Extra pequeno (10px)",
+                    "12": "Muito Pequena (12px)",
                     "14": "Pequena (14px)",
                     "16": "Padrão (16px)",
-                    "12": "Muito Pequena (12px)",
+                    "18": "Grande (18px)",
+                    "20": "Muito Grande (20px)",
                     "24": "Extragrande (24px)",
-                    "10": "Extra pequeno (10px)",
                     "title": "Tamanho da Fonte"
                 },
                 "app_font": "Fonte",
@@ -323,14 +292,14 @@
                 "target": "Destino",
                 "title": "Configurações de Tradução",
                 "font_size": {
-                    "14": "Pequena (14px)",
-                    "title": "Tamanho da Fonte",
-                    "24": "Muito, Muito Grande (24px)",
-                    "20": "Muito Grande (20px)",
-                    "12": "Muito Pequena (12px)",
-                    "16": "Padrão (16px)",
                     "10": "Muito, Muito Pequena (10px)",
-                    "18": "Grande (18px)"
+                    "12": "Muito Pequena (12px)",
+                    "14": "Pequena (14px)",
+                    "16": "Padrão (16px)",
+                    "18": "Grande (18px)",
+                    "20": "Muito Grande (20px)",
+                    "24": "Muito, Muito Grande (24px)",
+                    "title": "Tamanho da Fonte"
                 },
                 "google": "Google",
                 "detect_engine": "Mecanismo de Detecção de Idioma",

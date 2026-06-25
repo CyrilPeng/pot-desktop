@@ -14,6 +14,12 @@ export default function ConfigModal(props) {
     const serviceName = getServiceName(serviceInstanceKey)
 
     const { t } = useTranslation();
+
+    // Guard against removed built-in services
+    if (!pluginServiceFlag && !builtinServices[serviceName]) {
+        return <></>;
+    }
+
     const ConfigComponent = pluginServiceFlag ? PluginConfig : builtinServices[serviceName].Config;
 
     return pluginServiceFlag && !(serviceName in pluginList) ? (

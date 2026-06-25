@@ -241,6 +241,10 @@ export default function TargetArea(props) {
                 setError('Language not supported');
             }
         } else {
+            if (!builtinServices[translateServiceName]) {
+                setError(`Service "${translateServiceName}" has been removed`);
+                return;
+            }
             const LanguageEnum = builtinServices[translateServiceName].Language;
             if (sourceLanguage in LanguageEnum && targetLanguage in LanguageEnum) {
                 let newTargetLanguage = targetLanguage;

@@ -80,10 +80,7 @@
 
 ## 翻译
 
--   [x] [OpenAI](https://platform.openai.com/)
--   [x] [智谱 AI](https://www.zhipuai.cn/)
--   [x] [Gemini Pro](https://gemini.google.com/)
--   [x] [Ollama](https://www.ollama.com/) (离线)
+-   [x] AI 翻译（支持 OpenAI 兼容端口、Anthropic、Gemini、Ollama）
 -   [x] [阿里翻译](https://www.aliyun.com/product/ai/alimt)
 -   [x] [百度翻译](https://fanyi.baidu.com/)
 -   [x] [彩云小译](https://fanyi.caiyunapp.com/)

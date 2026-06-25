@@ -55,14 +55,14 @@
                 "app_font": "Font",
                 "app_fallback_font": "Fallback Font",
                 "font_size": {
-                    "title": "Font Size",
                     "10": "Extra Small (10px)",
                     "12": "Very Small (12px)",
                     "14": "Small (14px)",
                     "16": "Standard (16px)",
                     "18": "Large (18px)",
                     "20": "Very Large (20px)",
-                    "24": "Extra Large (24px)"
+                    "24": "Extra Large (24px)",
+                    "title": "Font Size"
                 },
                 "default_font": "Default",
                 "theme": {
@@ -108,14 +108,14 @@
                 "delete_newline": "Delete Newline",
                 "remember_language": "Remember Target Language",
                 "font_size": {
-                    "title": "Font Size",
                     "10": "Very Very Small (10px)",
                     "12": "Very Small (12px)",
                     "14": "Small (14px)",
                     "16": "Standard (16px)",
                     "18": "Large (18px)",
                     "20": "Very Large (20px)",
-                    "24": "Very Very Large (24px)"
+                    "24": "Very Very Large (24px)",
+                    "title": "Font Size"
                 },
                 "window_position": "Window Position",
                 "mouse": "Follow the Mouse",
@@ -248,51 +248,6 @@
                 "bing": {
                     "title": "Bing"
                 },
-                "ollama": {
-                    "title": "Ollama",
-                    "install_ollama": "Unable to connect to local ollama, please download, install and start ollama first. If you use ollama that is not on this machine, please change the request address.",
-                    "install_ollama_link": "Download Ollama",
-                    "request_path": "Request Path",
-                    "stream": "Stream Mode",
-                    "model": "Model",
-                    "install_model": "Install",
-                    "ready": "Ready",
-                    "not_installed": "This model has not been installed yet, click to download and install now",
-                    "supported_models": "Click to see a list of Ollama available models",
-                    "prompt_description": "By customizing the Prompt, you can customize the behavior of AI. $text $from $to $detect will be replaced with the text to be translated, source language, target language and detected language.",
-                    "add": "Add Prompt"
-                },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "Service Provider",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "request_path": "Request Path",
-                    "api_key": "Api Key",
-                    "model": "Model",
-                    "stream": "Stream Mode",
-                    "prompt_description": "By customizing the Prompt, you can customize the behavior of OpenAI. $text $from $to $detect will be replaced with the text to be translated, source language, target language and detected language.",
-                    "add": "Add Prompt"
-                },
-                "geminipro": {
-                    "title": "Gemini Pro",
-                    "request_path": "Request Path",
-                    "api_key": "Api Key",
-                    "stream": "Stream Mode",
-                    "prompt_description": "By customizing the Prompt, you can customize the behavior of Gemini Pro. $text $from $to $detect will be replaced with the text to be translated, source language, target language and detected language.",
-                    "add": "Add Prompt"
-                },
-                "chatglm": {
-                    "title": "ChatGLM",
-                    "model": "Model",
-                    "chatglm_turbo": "ChatGLM Turbo",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "chatglm_std": "ChatGLM Std",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "api_key": "Api Key",
-                    "prompt_description": "By customizing the Prompt, you can customize the behavior of AI. $text $from $to $detect will be replaced with the text to be translated, source language, target language and detected language.",
-                    "add": "Add Prompt"
-                },
                 "yandex": {
                     "title": "Yandex"
                 },
@@ -357,6 +312,20 @@
                 "caiyun": {
                     "title": "Caiyun",
                     "token": "Token"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "recognize": {

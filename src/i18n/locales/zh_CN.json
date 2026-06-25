@@ -55,14 +55,14 @@
                 "app_font": "字体",
                 "app_fallback_font": "后备字体",
                 "font_size": {
-                    "title": "字体大小",
                     "10": "极小 (10px)",
                     "12": "特小 (12px)",
                     "14": "小 (14px)",
                     "16": "标准 (16px)",
                     "18": "大 (18px)",
                     "20": "特大 (20px)",
-                    "24": "超大 (24px)"
+                    "24": "超大 (24px)",
+                    "title": "字体大小"
                 },
                 "default_font": "默认",
                 "theme": {
@@ -108,14 +108,14 @@
                 "delete_newline": "自动删除换行",
                 "remember_language": "记住目标语言",
                 "font_size": {
-                    "title": "字体大小",
                     "10": "极小 (10px)",
                     "12": "特小 (12px)",
                     "14": "小 (14px)",
                     "16": "标准 (16px)",
                     "18": "大 (18px)",
                     "20": "特大 (20px)",
-                    "24": "超大 (24px)"
+                    "24": "超大 (24px)",
+                    "title": "字体大小"
                 },
                 "window_position": "窗口位置",
                 "mouse": "跟随鼠标",
@@ -248,51 +248,6 @@
                 "bing": {
                     "title": "必应翻译"
                 },
-                "ollama": {
-                    "title": "Ollama",
-                    "install_ollama": "无法连接到本地ollama，请先下载安装并启动ollama，如果您使用不在本机上的ollama，请更改请求地址",
-                    "install_ollama_link": "Ollama 下载地址",
-                    "request_path": "请求地址",
-                    "stream": "流式输出",
-                    "model": "模型",
-                    "install_model": "安装",
-                    "ready": "就绪",
-                    "not_installed": "该模型还未安装，点击立即下载安装",
-                    "supported_models": "点击查看 Ollama 可用模型列表",
-                    "prompt_description": "通过自定义Prompt自定义AI的行为, $text $from $to $detect 将会被替换为 待翻译文本，源语言，目标语言和检测到的语言。",
-                    "add": "添加 Prompt"
-                },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "服务提供商",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "request_path": "请求地址",
-                    "api_key": "Api Key",
-                    "model": "模型",
-                    "stream": "流式输出",
-                    "prompt_description": "通过自定义Prompt自定义OpenAI行为, $text $from $to $detect 将会被替换为 待翻译文本，源语言，目标语言和检测到的语言。",
-                    "add": "添加 Prompt"
-                },
-                "geminipro": {
-                    "title": "Gemini Pro",
-                    "request_path": "请求地址",
-                    "api_key": "Api Key",
-                    "stream": "流式输出",
-                    "prompt_description": "通过自定义Prompt自定义Gemini Pro的行为, $text $from $to $detect 将会被替换为 待翻译文本，源语言，目标语言和检测到的语言。",
-                    "add": "添加 Prompt"
-                },
-                "chatglm": {
-                    "title": "智谱 AI",
-                    "model": "模型",
-                    "chatglm_turbo": "ChatGLM Turbo",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "chatglm_std": "ChatGLM Std",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "api_key": "Api Key",
-                    "prompt_description": "通过自定义Prompt自定义AI行为, $text $from $to $detect 将会被替换为 待翻译文本，源语言，目标语言和检测到的语言。",
-                    "add": "添加 Prompt"
-                },
                 "yandex": {
                     "title": "Yandex"
                 },
@@ -357,6 +312,20 @@
                 "caiyun": {
                     "title": "彩云小译",
                     "token": "Token"
+                },
+                "ai": {
+                    "title": "AI 翻译",
+                    "protocol": "协议类型",
+                    "base_url": "请求地址",
+                    "api_key": "API 密钥",
+                    "model": "模型",
+                    "stream": "流式输出",
+                    "prompt_description": "通过自定义Prompt自定义AI行为, $text $from $to $detect 将会被替换为 待翻译文本，源语言，目标语言和检测到的语言。",
+                    "add": "添加 Prompt",
+                    "request_args": "请求参数",
+                    "install_model": "安装",
+                    "ready": "就绪",
+                    "not_installed": "该模型还未安装，点击立即下载安装"
                 }
             },
             "recognize": {

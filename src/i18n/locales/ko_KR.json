@@ -28,26 +28,19 @@
                 "bing": {
                     "title": "Bing"
                 },
-                "ollama": {
-                    "title": "Ollama",
-                    "install_ollama": "로컬 Ollama에 연결할 수 없습니다. 먼저 Ollama를 다운로드, 설치, 실행해 주세요.",
-                    "install_ollama_link": "Ollama 다운로드",
-                    "request_path": "경로 요청",
-                    "stream": "실시간 모드",
-                    "model": "모델",
-                    "install_model": "설치",
-                    "ready": "준비",
-                    "not_installed": "해당 모델이 설치되어 있지 않습니다. 다운로드 및 설치하려면 지금 클릭하세요",
-                    "supported_models": "Ollama 지원 모델 목록 보기",
-                    "prompt_description": "프롬프트를 사용자 지정하면 AI의 동작을 원하는 대로 설정할 수 있습니다. $text, $from, $to, $detect는 각각 번역할 텍스트, 원본 언어, 대상 언어, 감지된 언어로 대체됩니다.",
-                    "add": "프롬프트 추가"
-                },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "서비스 제공자",
-                    "request_path": "경로 요청",
+                "ai": {
+                    "title": "AI 번역",
+                    "protocol": "프로토콜",
+                    "base_url": "기본 URL",
                     "api_key": "API 키",
-                    "model": "모델"
+                    "model": "모델",
+                    "stream": "스트리밍",
+                    "prompt_description": "Prompt로 AI 동작을 사용자 정의합니다. $text $from $to $detect는 소스 텍스트, 소스 언어, 대상 언어, 감지된 언어로 대체됩니다.",
+                    "add": "Prompt 추가",
+                    "request_args": "요청 인수",
+                    "install_model": "설치",
+                    "ready": "준비 완료",
+                    "not_installed": "이 모델은 설치되지 않았습니다. 클릭하여 다운로드하고 설치하세요."
                 }
             },
             "help": "설정 방법 안내",
@@ -100,14 +93,14 @@
                 "app_font": "글꼴",
                 "app_fallback_font": "대체 글꼴",
                 "font_size": {
-                    "title": "글꼴 크기",
                     "10": "최소 크기 (10px)",
                     "12": "아주 작게 (12px)",
                     "14": "작게 (14px)",
                     "16": "보통 (16px)",
                     "18": "크게 (18px)",
                     "20": "아주 크게 (20px)",
-                    "24": "최대 크기 (24px)"
+                    "24": "최대 크기 (24px)",
+                    "title": "글꼴 크기"
                 },
                 "default_font": "기본 글꼴",
                 "theme": {
@@ -153,14 +146,14 @@
                 "delete_newline": "줄바꿈 삭제",
                 "remember_language": "도착 언어 유지",
                 "font_size": {
-                    "title": "글꼴 크기",
                     "10": "최소 크기 (10px)",
                     "12": "아주 작게 (12px)",
                     "14": "작게 (14px)",
                     "16": "보통 (16px)",
                     "18": "크게 (18px)",
                     "20": "아주 크게 (20px)",
-                    "24": "최대 크기 (24px)"
+                    "24": "최대 크기 (24px)",
+                    "title": "글꼴 크기"
                 },
                 "window_position": "창 팝업 위치",
                 "mouse": "마우스 위치 기준",

@@ -56,12 +56,12 @@
                 "font_size": {
                     "10": "קטן במיוחד (10px)",
                     "12": "קטן מאוד (12px)",
+                    "14": "קטן (14px)",
                     "16": "רגיל (16px)",
+                    "18": "גדול (18px)",
                     "20": "גדול מאוד (20px)",
                     "24": "גדול במיוחד (24px)",
-                    "title": "גודל גופן",
-                    "18": "גדול (18px)",
-                    "14": "קטן (14px)"
+                    "title": "גודל גופן"
                 },
                 "default_font": "ברירת מחדל",
                 "transparent": "אפקט שקוף",
@@ -134,14 +134,14 @@
                 "history_disable": "השבת היסטוריה",
                 "remember_language": "זכור את שפת היעד",
                 "font_size": {
-                    "title": "גודל גופן",
                     "10": "קטן מאוד מאוד (10px)",
                     "12": "קטן מאוד (12px)",
                     "14": "קטן (14px)",
                     "16": "רגיל (16px)",
                     "18": "גדול (18px)",
                     "20": "גדול מאוד (20px)",
-                    "24": "גדול מאוד מאוד (24px)"
+                    "24": "גדול מאוד מאוד (24px)",
+                    "title": "גודל גופן"
                 },
                 "dynamic_translate": "תרגום דינמי",
                 "mouse": "עקוב אחר העכבר",
@@ -234,56 +234,11 @@
                     "title": "Google",
                     "custom_url": "קישור מותאם אישית"
                 },
-                "ollama": {
-                    "install_ollama_link": "הורד את Ollama",
-                    "title": "Ollama",
-                    "request_path": "בקש נתיב",
-                    "model": "מודל",
-                    "install_model": "התקן",
-                    "ready": "מוכן",
-                    "not_installed": "מודל זה לא הותקן עדיין, לחץ כדי להוריד ולהתקין עכשיו",
-                    "supported_models": "לחץ כדי לראות רשימה של דגמים זמינים ב- Ollama",
-                    "prompt_description": "על ידי התאמה אישית של ההנחיה, אתה יכול להתאים אישית את ההתנהגות של הבינה המלאכותית. $text $from $to $detect יוחלף בטקסט לתרגום, שפת המקור, שפת היעד ושפת הזיהוי.",
-                    "add": "הוסף הנחיה",
-                    "install_ollama": "אין אפשרות להתחבר לתוכנת ollama המקומית, אנא הורד, התקן והתחל תחילה את ollama. אם אתה משתמש ב-ollama במכונה אחרת, אנא שנה את כתובת הבקשה.",
-                    "stream": "מצב הזרמה"
-                },
                 "lingva": {
                     "title": "Lingva"
                 },
                 "bing": {
                     "title": "Bing"
-                },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "ספק שירות",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "api_key": "מפתח Api",
-                    "request_path": "בקש נתיב",
-                    "stream": "מצב הזרמה",
-                    "add": "הוסף הנחיה",
-                    "model": "מודל",
-                    "prompt_description": "על ידי התאמה אישית של ההנחיה, אתה יכול להתאים אישית את ההתנהגות של OpenAI כרצונך. $text $from $to $detect יוחלף בטקסט לתרגום, שפת המקור, שפת היעד ושפת הזיהוי."
-                },
-                "geminipro": {
-                    "title": "Gemini Pro",
-                    "request_path": "בקש נתיב",
-                    "api_key": "מפתח Api",
-                    "stream": "מצב הזרמה",
-                    "prompt_description": "על ידי התאמה אישית של ההנחיה, תוכל להתאים אישית את ההתנהגות של Gemini Pro כרצונך. $text $from $to $detect יוחלף בטקסט לתרגום, שפת המקור, שפת היעד ושפת הזיהוי.",
-                    "add": "הוסף הנחיה"
-                },
-                "chatglm": {
-                    "title": "ChatGLM",
-                    "model": "מודל",
-                    "chatglm_turbo": "ChatGLM Turbo",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "chatglm_std": "ChatGLM Std",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "api_key": "מפתח Api",
-                    "add": "הוסף הנחיה",
-                    "prompt_description": "על ידי התאמה אישית של ההנחיה, אתה יכול להתאים אישית את ההתנהגות של הבינה המלאכותית. $text $from $to $detect יוחלף בטקסט לתרגום, שפת המקור, שפת היעד ושפת הזיהוי."
                 },
                 "transmart": {
                     "username": "שם-משתמש",
@@ -333,6 +288,20 @@
                 },
                 "caiyun": {
                     "token": "טוקן"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "no_need": "אין צורך בתצורה",

@@ -80,10 +80,7 @@
 
 ## Translation
 
--   [x] [OpenAI](https://platform.openai.com/)
--   [x] [ChatGLM](https://www.zhipuai.cn/)
--   [x] [Gemini Pro](https://gemini.google.com/)
--   [x] [Ollama](https://www.ollama.com/) (Offline)
+-   [x] AI Translation (OpenAI Compatible, Anthropic, Gemini, Ollama)
 -   [x] [Ali Translate](https://www.aliyun.com/product/ai/alimt)
 -   [x] [Baidu Translate](https://fanyi.baidu.com/)
 -   [x] [Caiyun](https://fanyi.caiyunapp.com/)

@@ -7,6 +7,20 @@
             "translate": {
                 "lingva": {
                     "title": "Lingva"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             }
         }

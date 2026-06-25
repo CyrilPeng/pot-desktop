@@ -53,14 +53,14 @@
                 "app_language": "Язык интерфейса",
                 "app_theme": "Тема",
                 "font_size": {
-                    "14": "Мелкий (14 пикс.)",
-                    "title": "Размер шрифта",
-                    "24": "Самый крупный (24 пикс.)",
-                    "20": "Очень крупный (20 пикс.)",
-                    "12": "Очень мелкий (12 пикс.)",
-                    "16": "Стандартный (16 пикс.)",
                     "10": "Самый мелкий (10 пикс.)",
-                    "18": "Крупный (18 пикс.)"
+                    "12": "Очень мелкий (12 пикс.)",
+                    "14": "Мелкий (14 пикс.)",
+                    "16": "Стандартный (16 пикс.)",
+                    "18": "Крупный (18 пикс.)",
+                    "20": "Очень крупный (20 пикс.)",
+                    "24": "Самый крупный (24 пикс.)",
+                    "title": "Размер шрифта"
                 },
                 "theme": {
                     "light": "Светлая",
@@ -125,14 +125,14 @@
                 "always_on_top": "Поверх других окон",
                 "close_on_blur": "Закрыть окно при потере фокуса",
                 "font_size": {
-                    "14": "Мелкий (14 пикс.)",
-                    "title": "Размер шрифта",
-                    "24": "Самый крупный (24 пикс.)",
-                    "20": "Очень крупный (20 пикс.)",
-                    "12": "Очень мелкий (12 пикс.)",
-                    "16": "Стандартный (16 пикс.)",
                     "10": "Самый мелкий (10 пикс.)",
-                    "18": "Крупный (18 пикс.)"
+                    "12": "Очень мелкий (12 пикс.)",
+                    "14": "Мелкий (14 пикс.)",
+                    "16": "Стандартный (16 пикс.)",
+                    "18": "Крупный (18 пикс.)",
+                    "20": "Очень крупный (20 пикс.)",
+                    "24": "Самый крупный (24 пикс.)",
+                    "title": "Размер шрифта"
                 }
             },
             "recognize": {
@@ -248,18 +248,6 @@
                 "bing": {
                     "title": "Bing"
                 },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "Поставщик услуг",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "request_path": "Путь запроса",
-                    "api_key": "Api Key",
-                    "model": "Модель",
-                    "stream": "Режим потока",
-                    "prompt_description": "Указав Промт, вы можете настроить поведение OpenAI. $text $from $to $detect будет заменён текстом для перевода, исходным языком, целевым языком и определённым языком.",
-                    "add": "Добавить Промт"
-                },
                 "yandex": {
                     "title": "Яндекс"
                 },
@@ -322,41 +310,22 @@
                     "title": "Caiyun",
                     "token": "Токен"
                 },
-                "chatglm": {
-                    "title": "ChatGLM",
-                    "api_key": "Api Key",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "model": "Модель",
-                    "chatglm_std": "ChatGLM Std",
-                    "add": "Добавить Промт",
-                    "prompt_description": "Указав Промт, вы можете настроить поведение ИИ. $text $from $to $detect будет заменён текстом для перевода, исходным языком, целевым языком и определённым языком.",
-                    "chatglm_turbo": "ChatGLM Turbo"
-                },
-                "geminipro": {
-                    "add": "Добавить Промт",
-                    "api_key": "Api Key",
-                    "stream": "Потоковый режим",
-                    "prompt_description": "Указав Промт, вы можете настроить поведение Gemini Pro. $text $from $to $detect будет заменён текстом для перевода, исходным языком, целевым языком и определённым языком.",
-                    "title": "Gemini Pro",
-                    "request_path": "Путь запроса"
-                },
-                "ollama": {
-                    "title": "Ollama",
-                    "add": "Добавить Промт",
-                    "supported_models": "Нажмите, чтобы просмотреть список моделей Ollama",
-                    "prompt_description": "Указав Промт, вы можете настроить поведение ИИ. $text $from $to $detect будет заменён текстом для перевода, исходным языком, целевым языком и определённым языком.",
-                    "install_ollama": "Не удаётся подключиться к локальному Ollama. Пожалуйста, загрузите и установите Ollama. Если вы используете Ollama, которая не установлена на этом компьютере, пожалуйста, измените адрес запроса.",
-                    "request_path": "Путь запроса",
-                    "model": "Модель",
-                    "install_model": "Установить",
-                    "ready": "Готово",
-                    "not_installed": "Эта модель ещё не установлена, нажмите, чтобы загрузить и установить",
-                    "stream": "Потоковый режим",
-                    "install_ollama_link": "Загрузить Ollama"
-                },
                 "ecdict": {
                     "title": "ECDict (Online)"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "recognize": {

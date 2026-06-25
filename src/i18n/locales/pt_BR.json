@@ -53,14 +53,14 @@
                 "app_language": "Idioma de Exibição",
                 "app_theme": "Tema",
                 "font_size": {
-                    "14": "Pequena (14px)",
-                    "title": "Tamanho da Fonte",
-                    "24": "Extragrande (24px)",
-                    "20": "Muito Grande (20px)",
-                    "12": "Muito Pequena (12px)",
-                    "16": "Padrão (16px)",
                     "10": "Extra pequeno (10px)",
-                    "18": "Grande (18px)"
+                    "12": "Muito Pequena (12px)",
+                    "14": "Pequena (14px)",
+                    "16": "Padrão (16px)",
+                    "18": "Grande (18px)",
+                    "20": "Muito Grande (20px)",
+                    "24": "Extragrande (24px)",
+                    "title": "Tamanho da Fonte"
                 },
                 "theme": {
                     "light": "Luz",
@@ -125,14 +125,14 @@
                 "yandex": "Yandex",
                 "niutrans": "NiuTrans",
                 "font_size": {
-                    "14": "Pequena (14px)",
-                    "title": "Tamanho da Fonte",
-                    "24": "Muito, Muito Grande (24px)",
-                    "20": "Muito Grande (20px)",
-                    "12": "Muito Pequena (12px)",
-                    "16": "Padrão (16px)",
                     "10": "Muito, Muito Pequena (10px)",
-                    "18": "Grande (18px)"
+                    "12": "Muito Pequena (12px)",
+                    "14": "Pequena (14px)",
+                    "16": "Padrão (16px)",
+                    "18": "Grande (18px)",
+                    "20": "Muito Grande (20px)",
+                    "24": "Muito, Muito Grande (24px)",
+                    "title": "Tamanho da Fonte"
                 }
             },
             "recognize": {
@@ -248,18 +248,6 @@
                 "bing": {
                     "title": "Bing"
                 },
-                "openai": {
-                    "title": "OpenAI",
-                    "service": "Prestador de serviços",
-                    "openai": "OpenAI",
-                    "azure": "Azure",
-                    "request_path": "Caminho do Pedido",
-                    "api_key": "Api Key",
-                    "model": "Modelo",
-                    "stream": "Modo de Stream",
-                    "prompt_description": "Ao personalizar o Prompt, você pode personalizar o comportamento do OpenAI. $text $from $to $detect será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detectado.",
-                    "add": "Adicionar Prompt"
-                },
                 "yandex": {
                     "title": "Yandex"
                 },
@@ -322,41 +310,22 @@
                     "title": "Caiyun",
                     "token": "Token"
                 },
-                "chatglm": {
-                    "title": "ChatGLM",
-                    "api_key": "Chave Api",
-                    "chatglm_lite": "ChatGLM Lite",
-                    "chatglm_pro": "ChatGLM Pro",
-                    "model": "Modelo",
-                    "chatglm_std": "ChatGLM Std",
-                    "add": "Adicionar Prompt",
-                    "prompt_description": "Ao personalizar o Prompt, você pode personalizar o comportamento da IA. $text $from $to $detect será substituído pelo texto a ser traduzido, o idioma de origem, o idioma de destino e o idioma detectado.",
-                    "chatglm_turbo": "ChatGLM Turbo"
-                },
-                "geminipro": {
-                    "add": "Adicionar Prompt",
-                    "api_key": "Chave Api",
-                    "stream": "Modo Stream",
-                    "prompt_description": "Ao personalizar o Prompt, você pode personalizar o comportamento do Gemini Pro. $text $from $to $detect será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detectado.",
-                    "title": "Gemini Pro",
-                    "request_path": "Caminho de Solicitação"
-                },
-                "ollama": {
-                    "install_ollama": "Não foi possível conectar-se ao ollama local. Baixe, instale e inicie o ollama primeiro. Se você usar ollama que não está nesta máquina, altere o endereço da solicitação.",
-                    "install_ollama_link": "Baixar Ollama",
-                    "title": "Ollama",
-                    "request_path": "Caminho da Solicitação",
-                    "add": "Adicionar Prompt",
-                    "model": "Modelo",
-                    "supported_models": "Clique para ver uma lista de modelos disponíveis da Ollama",
-                    "install_model": "Instalar",
-                    "stream": "Modo Stream",
-                    "ready": "Pronto",
-                    "not_installed": "Este modelo ainda não foi instalado, clique para baixar e instalar agora",
-                    "prompt_description": "Ao personalizar o Prompt, você pode personalizar o comportamento da IA. $text $from $to $detect será substituído pelo texto a ser traduzido, idioma de origem, idioma de destino e idioma detectado."
-                },
                 "ecdict": {
                     "title": "ECDict(Online)"
+                },
+                "ai": {
+                    "title": "AI Translation",
+                    "protocol": "Protocol",
+                    "base_url": "Base URL",
+                    "api_key": "API Key",
+                    "model": "Model",
+                    "stream": "Streaming",
+                    "prompt_description": "Customize AI behavior via Prompt. $text $from $to $detect will be replaced with source text, source language, target language, and detected language.",
+                    "add": "Add Prompt",
+                    "request_args": "Request Arguments",
+                    "install_model": "Install",
+                    "ready": "Ready",
+                    "not_installed": "This model is not installed. Click to download and install."
                 }
             },
             "recognize": {

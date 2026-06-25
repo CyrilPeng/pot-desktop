@@ -17,6 +17,34 @@ export default function ServiceItem(props) {
     const serviceSourceType = getServiceSouceType(serviceInstanceKey)
     const serviceName = getServiceName(serviceInstanceKey)
 
+    // Guard against removed built-in services
+    if (serviceSourceType === ServiceSourceType.BUILDIN && !builtinServices[serviceName]) {
+        return (
+            <div className='bg-content2 rounded-md px-[10px] py-[20px] flex justify-between opacity-50'>
+                <div className='flex'>
+                    <div {...drag} className='text-2xl my-auto'>
+                        <RxDragHandleHorizontal />
+                    </div>
+                    <Spacer x={2} />
+                    <h2 className='my-auto text-danger'>{serviceName} (removed)</h2>
+                </div>
+                <div className='flex'>
+                    <Button
+                        isIconOnly
+                        size='sm'
+                        variant='light'
+                        color='danger'
+                        onPress={() => {
+                            deleteServiceInstance(serviceInstanceKey);
+                        }}
+                    >
+                        <MdDeleteOutline className='text-2xl' />
+                    </Button>
+                </div>
+            </div>
+        );
+    }
+
     return serviceSourceType === ServiceSourceType.PLUGIN && !(serviceName in pluginList) ? (
         <></>
     ) : (
