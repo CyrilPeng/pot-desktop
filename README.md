@@ -2,7 +2,7 @@
 
 # Pot (派了个萌的翻译器)
 
-> 🌈 一个跨平台的划词翻译软件 ([QQ 频道](https://pd.qq.com/s/akns94e1r))
+> 🌈 一个跨平台的划词翻译软件
 
 ![License](https://img.shields.io/github/license/CyrilPeng/pot-desktop.svg)
 ![Tauri](https://img.shields.io/badge/Tauri-1.6.8-blue?logo=tauri)
@@ -33,16 +33,15 @@
 -   [特色功能](#特色功能)
 -   [支持接口](#支持接口)
 -   [插件系统](#插件系统)
--   [安装指南](#安装指南)
+-   [安装](#安装)
 -   [外部调用](#外部调用)
 -   [Wayland 支持](#wayland-支持)
--   [国际化](#国际化weblate)
--   [贡献者](#贡献者)
--   [感谢](#感谢)
 
 <div align="center">
 
 # 使用说明
+
+</div>
 
 | 划词翻译                                             | 输入翻译                                                       | 外部调用                                                             |
 | ---------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -80,7 +79,7 @@
 
 ## 翻译
 
--   [x] AI 翻译（支持 OpenAI 兼容端口、Anthropic、Gemini、Ollama）
+-   [x] AI 翻译（支持 OpenAI Compatible、Anthropic、Gemini、Ollama）
 -   [x] [阿里翻译](https://www.aliyun.com/product/ai/alimt)
 -   [x] [百度翻译](https://fanyi.baidu.com/)
 -   [x] [彩云小译](https://fanyi.caiyunapp.com/)
@@ -95,9 +94,6 @@
 -   [x] [有道翻译](https://ai.youdao.com/)
 -   [x] [剑桥词典](https://dictionary.cambridge.org/)
 -   [x] [Yandex](https://translate.yandex.com/)
--   [x] [Lingva](https://github.com/TheDavidDelta/lingva-translate) ([插件](https://github.com/pot-app/pot-app-translate-plugin-template))
--   [x] [Tatoeba](https://tatoeba.org/) ([插件](https://github.com/pot-app/pot-app-translate-plugin-tatoeba))
--   [x] [ECDICT](https://github.com/skywind3000/ECDICT) ([插件](https://github.com/pot-app/pot-app-translate-plugin-ecdict))
 
 更多接口支持见 [插件系统](#插件系统)
 
@@ -115,9 +111,7 @@
 -   [x] [腾讯图片翻译](https://cloud.tencent.com/document/product/551/17232)
 -   [x] [百度图片翻译](https://fanyi-api.baidu.com/product/22)
 -   [x] [Simple LaTeX](https://simpletex.cn/)
--   [x] [OCRSpace](https://ocr.space/) ([插件](https://github.com/pot-app/pot-app-recognize-plugin-template))
--   [x] [Rapid](https://github.com/RapidAI/RapidOcrOnnx) (离线 [插件](https://github.com/pot-app/pot-app-recognize-plugin-rapid))
--   [x] [Paddle](https://github.com/hiroi-sora/PaddleOCR-json) (离线 [插件](https://github.com/pot-app/pot-app-recognize-plugin-paddle))
+-   [x] 二维码识别
 
 更多接口支持见 [插件系统](#插件系统)
 
@@ -125,16 +119,10 @@
 
 -   [x] [Lingva](https://github.com/thedaviddelta/lingva-translate)
 
-更多接口支持见 [插件系统](#插件系统)
-
 ## 生词本
 
 -   [x] [Anki](https://apps.ankiweb.net/)
 -   [x] [欧路词典](https://dict.eudic.net/)
--   [x] [有道](https://www.youdao.com/) ([插件](https://github.com/pot-app/pot-app-collection-plugin-youdao))
--   [x] [扇贝](https://web.shanbay.com/web/main) ([插件](https://github.com/pot-app/pot-app-collection-plugin-shanbay))
-
-更多接口支持见 [插件系统](#插件系统)
 
 <div align="center">
 
@@ -146,141 +134,45 @@
 
 ## 插件安装
 
-你可以在 [Plugin List](https://pot-app.com/plugin.html) 查找你需要的插件，然后前往插件仓库下载插件。
-
-pot 插件的扩展名为 `.potext`, 下载得到`.potext`文件之后， 在 偏好设置-服务设置-添加外部插件-安装外部插件 选择对应的 `.potext` 即可安装成功，添加到服务列表中即可像内置服务一样正常使用了。
-
-### 故障排除
-
--   找不到指定的模块 (Windows)
-
-    出现类似这样的报错是因为系统缺少 C++库，前往[这里](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)安装即可解决问题。
-
--   不是有效的 Win32 应用程序 (Windows)
-
-    出现类似这样的报错说明你没有下载对应系统或者架构的插件，前往插件仓库下载正确的插件即可解决问题。
+在 偏好设置-服务设置-添加外部插件-安装外部插件 选择对应的 `.potext` 文件即可安装成功，添加到服务列表中即可像内置服务一样正常使用了。
 
 ## 插件开发
 
-在 [Plugin List](https://pot-app.com/plugin.html) 中的 [模板](https://pot-app.com/plugin.html#%E6%A8%A1%E6%9D%BF) 章节提供了各种插件的开发模板，具体的开发文档请查看对应的模板仓库。
+各种插件的开发模板和文档请查看对应的模板仓库。
 
 <div align="center">
 
-# 安装指南
+# 安装
 
 </div>
 
-## Windows
+前往 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载对应平台的安装包：
 
-### 通过 Winget 安装
-
-```powershell
-winget install Pylogmon.pot
-```
-
-### 手动安装
-
-1. 在 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新 `exe` 安装包。
-
-    - 64 位机器下载 `pot_{version}_x64-setup.exe`
-    - 32 位机器下载 `pot_{version}_x86-setup.exe`
-    - arm64 机器下载 `pot_{version}_arm64-setup.exe`
-
-2. 双击安装包进行安装。
+| 平台 | 文件 |
+|------|------|
+| Windows (64位) | `pot_{version}_x64-setup.exe` |
+| Windows (32位) | `pot_{version}_x86-setup.exe` |
+| Windows (ARM64) | `pot_{version}_arm64-setup.exe` |
+| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg` |
+| macOS (Intel) | `pot_{version}_x64.dmg` |
+| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb` |
+| Linux (AppImage) | `pot_{version}_amd64.AppImage` |
 
 ### 故障排除
 
--   启动后没有界面，点击托盘图标没有反应
+**Windows**: 启动后没有界面？检查是否卸载/禁用了 WebView2，如需可下载内置 WebView2 的版本 `pot_{version}_{arch}_fix_webview2_runtime-setup.exe`。
 
-    检查是否卸载/禁用了 WebView2，如果卸载/禁用了 WebView2，请手动安装 WebView2 或将其恢复。
-
-    如果是企业版系统不方便安装或无法安装 WebView2，请尝试在 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载内置 WebView2 的版本 `pot_{version}_{arch}_fix_webview2_runtime-setup.exe`
-
-    若问题仍然存在请尝试使用 Windows7 兼容模式启动。
-
-## MacOS
-
-### 通过 Brew 安装
-
-1. 添加我们的 tap:
+**macOS**: 提示无法验证开发者？前往 设置 → 隐私与安全性，点击 仍要打开。若提示文件损坏：
 
 ```bash
-brew tap pot-app/homebrew-tap
+sudo xattr -d com.apple.quarantine /Applications/pot.app
 ```
 
-2. 安装 pot:
+**Linux (Nvidia)**: Webkit2Gtk 2.42.0 下可能崩溃，在 `/etc/environment` 中添加：
 
-```bash
-brew install --cask pot
 ```
-
-3. 更新 pot
-
-```bash
-brew upgrade --cask pot
+WEBKIT_DISABLE_DMABUF_RENDERER=1
 ```
-
-### 手动安装
-
-1. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新的 `dmg` 安装包。（如果您使用的是 M1 芯片，请下载名为`pot_{version}_aarch64.dmg`的安装包，否则请下载名为`pot_{version}_x64.dmg`的安装包）
-2. 双击下载的文件后将 pot 拖入 Applications 文件夹即可完成安装。
-
-### 故障排除
-
--   由于开发者无法验证，“pot”无法打开。
-
-    点击 取消 按钮，然后去 设置 -> 隐私与安全性 页面，点击 仍要打开 按钮，然后在弹出窗口里点击 打开 按钮即可，以后打开 pot 就再也不会有任何弹窗告警了
-
-    如果在 隐私与安全性 中找不到以上选项，或启动时提示文件损坏。打开 Terminal.app，并输入以下命令，然后重启 pot 即可：
-
-    ```bash
-    sudo xattr -d com.apple.quarantine /Applications/pot.app
-    ```
-
--   如果每次打开时都遇到辅助功能权限提示，或者无法进行划词翻译，请前往设置 -> 隐私与安全 -> 辅助功能，移除 “pot”，并重新添加 “pot”。
-
-## Linux
-
-### Debian/Ubuntu
-
-1. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新的对应架构的 `deb` 安装包。
-
-2. 使用 `apt-get` 进行安装
-
-    ```bash
-    sudo apt-get install ./pot_{version}_amd64.deb
-    ```
-
-### Arch/Manjaro
-
-> [!WARNING]
-> 在最新版本的 [Webkit2Gtk](https://archlinux.org/packages/extra/x86_64/webkit2gtk) (2.42.0) 中，由于 Nvidia 专有驱动未完全实现 DMABUF，将导致无法启动和崩溃的情况发生。<br>
-> 请降级或在 `/etc/environment` （或者其他设置环境变量的地方）中加入 `WEBKIT_DISABLE_DMABUF_RENDERER=1` 环境变量关闭 DMABUF 的使用。
-
-1. 在 [AUR](https://aur.archlinux.org/packages?O=0&K=pot-translation) 查看
-
-使用 `AUR helper` 安装：
-
-```bash
-yay -S pot-translation # 或 pot-translation-bin
-
-# paru -S pot-translation # 或 pot-translation-bin
-```
-
-2. 如果你使用 `archlinuxcn` 源，可以直接使用 pacman 安装
-
-```bash
-sudo pacman -S pot-translation
-```
-
-### Flatpak
-
-> [!WARNING]
-> Flatpak 版本缺失托盘图标。
-
-<a href='https://flathub.org/apps/com.pot_app.pot'>
-    <img width='240' alt='Download on Flathub' src='https://flathub.org/api/badge?locale=zh-Hans'/>
-</a>
 
 <div align="center">
 
@@ -290,7 +182,7 @@ sudo pacman -S pot-translation
 
 Pot 提供了完整的 HTTP 接口，以便可以被其他软件调用。您可以通过向 `127.0.0.1:port` 发送 HTTP 请求来调用 pot，其中的`port`是 pot 监听的端口号，默认为`60828`,可以在软件设置中进行更改。
 
-## API 文档:
+## API 文档
 
 ```bash
 POST "/" => 翻译指定文本(body为需要翻译的文本),
@@ -302,71 +194,34 @@ GET "/ocr_recognize" => 截图OCR,
 GET "/ocr_translate" => 截图翻译,
 GET "/ocr_recognize?screenshot=false" => 截图OCR(不使用软件内截图),
 GET "/ocr_translate?screenshot=false" => 截图翻译(不使用软件内截图),
-GET "/ocr_recognize?screenshot=true" => 截图OCR,
-GET "/ocr_translate?screenshot=true" => 截图翻译,
 ```
 
-## 示例：
+## 示例
 
--   调用划词翻译：
-
-    如果想要调用 pot 划词翻译，只需向`127.0.0.1:port`发送请求即可。
-
-    例如通过 curl 发送请求：
-
-    ```bash
-    curl "127.0.0.1:60828/selection_translate"
-    ```
+```bash
+curl "127.0.0.1:60828/selection_translate"
+```
 
 ## 不使用软件内截图
 
-这一功能可以让您在不使用软件内截图的情况下调用截图 OCR/截图翻译功能，这样您就可以使用您喜欢的截图工具来截图了，也可以解决在某些平台下 pot 自带的截图无法使用的问题。
-
-### 调用流程
-
 1. 使用其他截图工具截图
 2. 将截图保存在 `$CACHE/com.pot-app.desktop/pot_screenshot_cut.png`
-3. 向`127.0.0.1:port/ocr_recognize?screenshot=false`发送请求即可调用成功
+3. 向 `127.0.0.1:port/ocr_recognize?screenshot=false` 发送请求
 
-> `$CACHE`为系统缓存目录，例如在 Windows 上为`C:\Users\{用户名}\AppData\Local\com.pot-app.desktop\pot_screenshot_cut.png`
+> `$CACHE` 为系统缓存目录，例如 Windows 上为 `C:\Users\{用户名}\AppData\Local\com.pot-app.desktop\`
 
-### 示例
+Hyprland 配置示例：
 
-在 Linux 下调用 Flameshot 进行截图 OCR:
-
-```bash
-rm ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && flameshot gui -s -p ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && curl "127.0.0.1:60828/ocr_recognize?screenshot=false"
+```conf
+bind = ALT, X, exec, grim -g "$(slurp)" ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && curl "127.0.0.1:60828/ocr_recognize?screenshot=false"
+bind = ALT, C, exec, grim -g "$(slurp)" ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && curl "127.0.0.1:60828/ocr_translate?screenshot=false"
 ```
-
-## 现有用法 (快捷划词翻译)
-
-### SnipDo (Windows)
-
-1. 从 [Microsoft Store](https://apps.microsoft.com/store/detail/snipdo/9NPZ2TVKJVT7) 下载安装 SnipDo。
-2. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载 pot 的 SnipDo 扩展 (pot.pbar)
-3. 双击下载的扩展文件完成安装。
-4. 选中文字，可以看到弹出的 SnipDo 工具条，点击翻译按钮即可翻译。
-
-### PopClip (MacOS)
-
-1. 从 [App Store](https://apps.apple.com/us/app/popclip/id445189367?mt=12) 下载安装 PopClip
-2. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载 pot 的 PopClip 扩展 (pot.popclipextz)
-3. 双击下载的扩展文件完成安装。
-4. 在 PopClip 的扩展中启用 pot 扩展，选中文本即可点击翻译。
-
-### Starry (Linux)
-
-> Starry 目前仍处于开发阶段，因此您只能手动编译它。
-
-Github: [ccslykx/Starry](https://github.com/ccslykx/Starry)
 
 <div align="center">
 
 # Wayland 支持
 
 </div>
-
-由于各大发行版对于 Wayland 的支持程度不同，所以 pot 本身没法做到特别完美的支持，这里可以提供一些常见问题的解决方案，通过合理的设置之后，pot 也可以在 Wayland 下完美运行。
 
 ## 快捷键无法使用
 
@@ -376,94 +231,35 @@ Github: [ccslykx/Starry](https://github.com/ccslykx/Starry)
 
 在一些纯 Wayland 桌面环境/窗口管理器(如 Hyprland)上，pot 内置的截图无法使用，这时可以通过使用其他截图工具代替，详见 [不使用软件内截图](#不使用软件内截图)
 
-下面给出在 Hyprland 下的配置示例(通过 grim 和 slurp 实现截图)：
-
-```conf
-bind = ALT, X, exec, grim -g "$(slurp)" ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && curl "127.0.0.1:60828/ocr_recognize?screenshot=false"
-bind = ALT, C, exec, grim -g "$(slurp)" ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && curl "127.0.0.1:60828/ocr_translate?screenshot=false"
-```
-
-其他桌面环境/窗口管理器也是类似的操作
-
 ## 划词翻译窗口跟随鼠标位置
 
-由于目前 pot 在 Wayland 下还无法获取到正确的鼠标坐标，所以内部的实现无法工作。 对于某些桌面环境/窗口管理器，可以通过设置窗口规则来实现窗口跟随鼠标位置，这里以 Hyprland 为例：
+Hyprland 配置示例：
 
 ```conf
-windowrulev2 = float, class:(pot), title:(Translator|OCR|PopClip|Screenshot Translate) # Translation window floating
-windowrulev2 = move cursor 0 0, class:(pot), title:(Translator|PopClip|Screenshot Translate) # Translation window follows the mouse position.
+windowrulev2 = float, class:(pot), title:(Translator|OCR|PopClip|Screenshot Translate)
+windowrulev2 = move cursor 0 0, class:(pot), title:(Translator|PopClip|Screenshot Translate)
 ```
-
-<div align="center">
-
-# 国际化([Weblate](https://hosted.weblate.org/engage/pot-app/))
-
-[![](https://hosted.weblate.org/widget/pot-app/pot-desktop/svg-badge.svg)](https://hosted.weblate.org/engage/pot-app/)
-
-[![](https://hosted.weblate.org/widget/pot-app/pot-desktop/zh_Hans/multi-auto.svg)](https://hosted.weblate.org/engage/pot-app/)
-
-</div>
-
-<div align="center">
-
-# 贡献者
-
-</div>
-
-<img src="https://github.com/pot-app/.github/blob/master/pot-desktop-contributions.svg?raw=true" width="100%"/>
 
 ## 手动编译
 
 ### 环境要求
 
-Node.js >= 18.0.0
-
-pnpm >= 8.5.0
-
-Rust >= 1.80.0
+- Node.js >= 18.0.0
+- pnpm >= 8.5.0
+- Rust >= 1.80.0
 
 ### 开始编译
 
-1. Clone 仓库
+```bash
+git clone https://github.com/CyrilPeng/pot-desktop.git
+cd pot-desktop
+pnpm install
+pnpm tauri dev   # 开发调试
+pnpm tauri build # 打包构建
+```
 
-    ```bash
-    git clone https://github.com/CyrilPeng/pot-desktop.git
-    ```
+Linux 额外依赖：
 
-2. 安装依赖
-
-    ```bash
-    cd pot-desktop
-    pnpm install
-    ```
-
-3. 安装依赖(仅 Linux 需要)
-
-    ```bash
-    sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libayatana-appindicator3-dev librsvg2-dev patchelf libxdo-dev libxcb1 libxrandr2 libdbus-1-3
-    ```
-
-4. 开发调试
-
-    ```bash
-    pnpm tauri dev # Run the app in development mode
-    ```
-
-5. 打包构建
-    ```bash
-    pnpm tauri build # Build into installation package
-    ```
-
-<div align="center">
-
-# 感谢
-
-</div>
-
--   [Bob](https://github.com/ripperhe/Bob) 灵感来源
--   [bob-plugin-openai-translator](https://github.com/yetone/bob-plugin-openai-translator) OpenAI 接口参考
--   [@uiYzzi](https://github.com/uiYzzi) 实现思路
--   [@Lichenkass](https://github.com/Lichenkass) 维护 Deepin 应用商店中的 pot
--   [Tauri](https://github.com/tauri-apps/tauri) 好用的 GUI 框架
-
-<div align="center">
+```bash
+sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libayatana-appindicator3-dev librsvg2-dev patchelf libxdo-dev libxcb1 libxrandr2 libdbus-1-3
+```
