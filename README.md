@@ -4,7 +4,7 @@
 
 > 🌈 一个跨平台的划词翻译软件 ([QQ 频道](https://pd.qq.com/s/akns94e1r))
 
-![License](https://img.shields.io/github/license/pot-app/pot-desktop.svg)
+![License](https://img.shields.io/github/license/CyrilPeng/pot-desktop.svg)
 ![Tauri](https://img.shields.io/badge/Tauri-1.6.8-blue?logo=tauri)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?logo=javascript&logoColor=white)
 ![Rust](https://img.shields.io/badge/-Rust-orange?logo=rust&logoColor=white)
@@ -180,7 +180,7 @@ winget install Pylogmon.pot
 
 ### 手动安装
 
-1. 在 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 页面下载最新 `exe` 安装包。
+1. 在 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新 `exe` 安装包。
 
     - 64 位机器下载 `pot_{version}_x64-setup.exe`
     - 32 位机器下载 `pot_{version}_x86-setup.exe`
@@ -194,7 +194,7 @@ winget install Pylogmon.pot
 
     检查是否卸载/禁用了 WebView2，如果卸载/禁用了 WebView2，请手动安装 WebView2 或将其恢复。
 
-    如果是企业版系统不方便安装或无法安装 WebView2，请尝试在 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 下载内置 WebView2 的版本 `pot_{version}_{arch}_fix_webview2_runtime-setup.exe`
+    如果是企业版系统不方便安装或无法安装 WebView2，请尝试在 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载内置 WebView2 的版本 `pot_{version}_{arch}_fix_webview2_runtime-setup.exe`
 
     若问题仍然存在请尝试使用 Windows7 兼容模式启动。
 
@@ -222,7 +222,7 @@ brew upgrade --cask pot
 
 ### 手动安装
 
-1. 从 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 页面下载最新的 `dmg` 安装包。（如果您使用的是 M1 芯片，请下载名为`pot_{version}_aarch64.dmg`的安装包，否则请下载名为`pot_{version}_x64.dmg`的安装包）
+1. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新的 `dmg` 安装包。（如果您使用的是 M1 芯片，请下载名为`pot_{version}_aarch64.dmg`的安装包，否则请下载名为`pot_{version}_x64.dmg`的安装包）
 2. 双击下载的文件后将 pot 拖入 Applications 文件夹即可完成安装。
 
 ### 故障排除
@@ -243,7 +243,7 @@ brew upgrade --cask pot
 
 ### Debian/Ubuntu
 
-1. 从 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 页面下载最新的对应架构的 `deb` 安装包。
+1. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载最新的对应架构的 `deb` 安装包。
 
 2. 使用 `apt-get` 进行安装
 
@@ -343,14 +343,14 @@ rm ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && flameshot gui -s -p ~/
 ### SnipDo (Windows)
 
 1. 从 [Microsoft Store](https://apps.microsoft.com/store/detail/snipdo/9NPZ2TVKJVT7) 下载安装 SnipDo。
-2. 从 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 下载 pot 的 SnipDo 扩展 (pot.pbar)
+2. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载 pot 的 SnipDo 扩展 (pot.pbar)
 3. 双击下载的扩展文件完成安装。
 4. 选中文字，可以看到弹出的 SnipDo 工具条，点击翻译按钮即可翻译。
 
 ### PopClip (MacOS)
 
 1. 从 [App Store](https://apps.apple.com/us/app/popclip/id445189367?mt=12) 下载安装 PopClip
-2. 从 [Release](https://github.com/pot-app/pot-desktop/releases/latest) 下载 pot 的 PopClip 扩展 (pot.popclipextz)
+2. 从 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 下载 pot 的 PopClip 扩展 (pot.popclipextz)
 3. 双击下载的扩展文件完成安装。
 4. 在 PopClip 的扩展中启用 pot 扩展，选中文本即可点击翻译。
 
@@ -427,7 +427,7 @@ Rust >= 1.80.0
 1. Clone 仓库
 
     ```bash
-    git clone https://github.com/pot-app/pot-desktop.git
+    git clone https://github.com/CyrilPeng/pot-desktop.git
     ```
 
 2. 安装依赖

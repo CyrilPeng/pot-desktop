@@ -4,7 +4,7 @@
 
 > A cross-platform translator application ([Telegram Group](https://t.me/pot_app))
 
-![License](https://img.shields.io/github/license/pot-app/pot-desktop.svg)
+![License](https://img.shields.io/github/license/CyrilPeng/pot-desktop.svg)
 ![Tauri](https://img.shields.io/badge/Tauri-1.6.8-blue?logo=tauri)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?logo=javascript&logoColor=white)
 ![Rust](https://img.shields.io/badge/-Rust-orange?logo=rust&logoColor=white)
@@ -180,7 +180,7 @@ winget install Pylogmon.pot
 
 ### Install Manually
 
-1. Download the installation package ending in `.exe` from the Latest [Release](https://github.com/pot-app/pot-desktop/releases/latest) page.
+1. Download the installation package ending in `.exe` from the Latest [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) page.
 
     - 64-bit machine download `pot_{version}_x64-setup.exe`
     - 32-bit machine download `pot_{version}_x86-setup.exe`
@@ -194,7 +194,7 @@ winget install Pylogmon.pot
 
     Check if WebView2 is uninstalled/disabled, if so, install WebView2 manually or restore it.
 
-    If the enterprise edition system is inconvenient to install or cannot install WebView2, please try to download the fix WebView2 version `pot_{version} at [Release](https://github.com/pot-app/pot-desktop/releases/latest) _{arch}_fix_webview2_runtime-setup.exe`
+    If the enterprise edition system is inconvenient to install or cannot install WebView2, please try to download the fix WebView2 version `pot_{version} at [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) _{arch}_fix_webview2_runtime-setup.exe`
 
     If the issue persists, please try starting in Windows 7 compatibility mode.
 
@@ -222,7 +222,7 @@ brew upgrade --cask pot
 
 ### Install Manually
 
-1. Download the installation package ending in `.dmg` from the Latest [Release](https://github.com/pot-app/pot-desktop/releases/latest) page. (If you are using M1, please download the installation package named `pot_{version}_aarch64.dmg`, otherwise download the installation package named `pot_{version}_x64.dmg`)
+1. Download the installation package ending in `.dmg` from the Latest [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) page. (If you are using M1, please download the installation package named `pot_{version}_aarch64.dmg`, otherwise download the installation package named `pot_{version}_x64.dmg`)
 2. Double click the downloaded file to install it.
 
 ### Troubleshooting
@@ -339,14 +339,14 @@ rm ~/.cache/com.pot-app.desktop/pot_screenshot_cut.png && flameshot gui -s -p ~/
 ### SnipDo (Windows)
 
 1. Download and install SnipDo in the [Microsoft Store](https://apps.microsoft.com/store/detail/snipdo/9NPZ2TVKJVT7)
-2. Download the SnipDo extension of pot from the Latest [Release](https://github.com/pot-app/pot-desktop/releases/latest) (pot.pbar)
+2. Download the SnipDo extension of pot from the Latest [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) (pot.pbar)
 3. Double click the downloaded file to install it.
 4. Selection some text, you can see the pot icon in the upper right corner of the selection, click the icon to translate.
 
 ### PopClip (MacOS)
 
 1. Download and install PopClip in the [App Store](https://apps.apple.com/us/app/popclip/id445189367?mt=12)
-2. Download the PopClip extension of pot from the Latest [Release](https://github.com/pot-app/pot-desktop/releases/latest) (pot.popclipextz)
+2. Download the PopClip extension of pot from the Latest [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) (pot.popclipextz)
 3. Double click the downloaded file to install it.
 4. Enable the pot extension in PopClip settings, and then you can translate by selecting text.
 
@@ -425,7 +425,7 @@ Rust >= 1.80.0
 1. Clone the repository
 
     ```bash
-    git clone https://github.com/pot-app/pot-desktop.git
+    git clone https://github.com/CyrilPeng/pot-desktop.git
     ```
 
 2. Install dependencies
