@@ -1,8 +1,12 @@
 #!/bin/bash
 
-wget https://nodejs.org/dist/v19.8.1/node-v19.8.1-linux-x64.tar.xz
-tar -Jxvf ./node-v19.8.1-linux-x64.tar.xz
-export PATH=$(pwd)/node-v19.8.1-linux-x64/bin:$PATH
+# Pin Rust to 1.80.0 for compatibility with wry 0.24.x
+rustup install 1.80.0
+rustup default 1.80.0
+
+wget https://nodejs.org/dist/v22.16.0/node-v22.16.0-linux-x64.tar.xz
+tar -Jxvf ./node-v22.16.0-linux-x64.tar.xz
+export PATH=$(pwd)/node-v22.16.0-linux-x64/bin:$PATH
 npm install pnpm -g
 
 rustup target add "$INPUT_TARGET"
