@@ -35,8 +35,8 @@ export default defineConfig(async () => ({
                 daemon: resolve(__dirname, 'daemon.html'),
             },
         },
-        // Tauri supports es2021
-        target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari11',
+        // Tauri supports es2021; safari14+ required for BigInt (onnxruntime-web)
+        target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari14',
         // don't minify for debug builds
         minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
         // produce sourcemaps for debug builds

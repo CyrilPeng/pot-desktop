@@ -11,17 +11,29 @@ async function resolveUpdater() {
     let changelog = await getChangeLog(TOKEN);
 
     const darwin_aarch64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_aarch64.app.tar.gz`;
-    const darwin_aarch64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_aarch64.app.tar.gz.sig`);
+    const darwin_aarch64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_aarch64.app.tar.gz.sig`
+    );
     const darwin_x86_64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64.app.tar.gz`;
-    const darwin_x86_64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64.app.tar.gz.sig`);
+    const darwin_x86_64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64.app.tar.gz.sig`
+    );
     const windows_x86_64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64-setup.nsis.zip`;
-    const windows_x86_64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64-setup.nsis.zip.sig`);
+    const windows_x86_64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64-setup.nsis.zip.sig`
+    );
     const windows_i686 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86-setup.nsis.zip`;
-    const windows_i686_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86-setup.nsis.zip.sig`);
+    const windows_i686_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86-setup.nsis.zip.sig`
+    );
     const windows_aarch64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64-setup.nsis.zip`;
-    const windows_aarch64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64-setup.nsis.zip.sig`);
+    const windows_aarch64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64-setup.nsis.zip.sig`
+    );
     const linux_x86_64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_amd64.AppImage.tar.gz`;
-    const linux_x86_64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_amd64.AppImage.tar.gz.sig`);
+    const linux_x86_64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_amd64.AppImage.tar.gz.sig`
+    );
 
     let updateData = {
         name: version,

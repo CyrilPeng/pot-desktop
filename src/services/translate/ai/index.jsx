@@ -275,9 +275,7 @@ export async function translate(text, from, to, options = {}) {
                     const dataStr = trimmed.startsWith('data:') ? trimmed.slice(5).trim() : trimmed;
                     try {
                         const data = JSON.parse(dataStr);
-                        const content = adapter.parseStreamData
-                            ? adapter.parseStreamData(JSON.stringify(data))
-                            : null;
+                        const content = adapter.parseStreamData ? adapter.parseStreamData(JSON.stringify(data)) : null;
                         if (content !== null && content !== undefined) {
                             target += content;
                             if (setResult) {

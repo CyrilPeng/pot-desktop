@@ -23,7 +23,7 @@ export async function initPipeline(modelDir) {
     }
     detSession = await loadOnnxModel(`${modelDir}/ppocrv6_det.onnx`);
     recSession = await loadOnnxModel(`${modelDir}/ppocrv6_rec.onnx`);
-    dictionary = await loadDictionary(`${modelDir}/ppocr_keys_v6.txt`);
+    dictionary = await loadDictionary(`${modelDir}/ppocr_keys_v1.txt`);
     // CLS model is optional (not yet available as ONNX)
     try {
         clsSession = await loadOnnxModel(`${modelDir}/ppocrv6_cls.onnx`);
@@ -196,7 +196,10 @@ function findBoundingBoxes(binary, w, h, origW, origH, ratio, minBoxSize) {
         for (let x = 0; x < w; x++) {
             if (binary[y * w + x] === 255 && visited[y * w + x] === 0) {
                 // BFS to find connected component
-                let minX = x, maxX = x, minY = y, maxY = y;
+                let minX = x,
+                    maxX = x,
+                    minY = y,
+                    maxY = y;
                 const queue = [[x, y]];
                 visited[y * w + x] = 1;
                 let head = 0;
@@ -210,11 +213,20 @@ function findBoundingBoxes(binary, w, h, origW, origH, ratio, minBoxSize) {
 
                     // 4-connected neighbors
                     const neighbors = [
-                        [cx - 1, cy], [cx + 1, cy],
-                        [cx, cy - 1], [cx, cy + 1],
+                        [cx - 1, cy],
+                        [cx + 1, cy],
+                        [cx, cy - 1],
+                        [cx, cy + 1],
                     ];
                     for (const [nx, ny] of neighbors) {
-                        if (nx >= 0 && nx < w && ny >= 0 && ny < h && binary[ny * w + nx] === 255 && visited[ny * w + nx] === 0) {
+                        if (
+                            nx >= 0 &&
+                            nx < w &&
+                            ny >= 0 &&
+                            ny < h &&
+                            binary[ny * w + nx] === 255 &&
+                            visited[ny * w + nx] === 0
+                        ) {
                             visited[ny * w + nx] = 1;
                             queue.push([nx, ny]);
                         }

@@ -1,6 +1,6 @@
 import { INSTANCE_NAME_CONFIG_KEY } from '../../../utils/service_instance';
 import { Button, Input, Switch, Card, CardBody, Progress } from '@nextui-org/react';
-import { appConfigDir, join } from '@tauri-apps/api/path';
+import { resourceDir, join } from '@tauri-apps/api/path';
 import { createDir, exists, writeBinaryFile } from '@tauri-apps/api/fs';
 import toast, { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
@@ -13,16 +13,16 @@ import { isModelReady, resetPipeline } from './pipeline';
 // Model download sources from ModelScope (domestic CDN, fast in China)
 const MODEL_SOURCES = {
     det: {
-        url: 'https://modelscope.cn/api/v1/models/PaddlePaddle/PP-OCRv6_medium_det_onnx/repo?Revision=master&FilePath=inference.onnx',
+        url: 'https://modelscope.cn/models/PaddlePaddle/PP-OCRv6_medium_det_onnx/resolve/master/inference.onnx',
         filename: 'ppocrv6_det.onnx',
     },
     rec: {
-        url: 'https://modelscope.cn/api/v1/models/PaddlePaddle/PP-OCRv6_medium_rec_onnx/repo?Revision=master&FilePath=inference.onnx',
+        url: 'https://modelscope.cn/models/PaddlePaddle/PP-OCRv6_medium_rec_onnx/resolve/master/inference.onnx',
         filename: 'ppocrv6_rec.onnx',
     },
     dict: {
-        url: 'https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/main/ppocr/utils/ppocr_keys_v6.txt',
-        filename: 'ppocr_keys_v6.txt',
+        url: 'https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/main/ppocr/utils/ppocr_keys_v1.txt',
+        filename: 'ppocr_keys_v1.txt',
     },
 };
 
@@ -55,9 +55,11 @@ export function Config(props) {
     useEffect(() => {
         async function checkModel() {
             if (!config || !config.modelDir) {
-                // Set default model dir
+                // Set default model dir to app install location
                 try {
-                    const appDir = await appConfigDir();
+                    let appDir = await resourceDir();
+                    // Remove Windows extended-length path prefix \\?\
+                    appDir = appDir.replace(/^\\\\\\?\\/, '');
                     const defaultDir = await join(appDir, 'models', 'ppocr');
                     setConfig({ ...config, modelDir: defaultDir });
                 } catch {
@@ -181,7 +183,9 @@ export function Config(props) {
                 <Card
                     isBlurred
                     className={`border-none ${
-                        modelStatus === 'ready' ? 'bg-success/20 dark:bg-success/10' : 'bg-warning/20 dark:bg-warning/10'
+                        modelStatus === 'ready'
+                            ? 'bg-success/20 dark:bg-success/10'
+                            : 'bg-warning/20 dark:bg-warning/10'
                     }`}
                     shadow='sm'
                 >
@@ -230,7 +234,11 @@ export function Config(props) {
                 {/* Download Progress */}
                 {isDownloading && (
                     <div className='my-2'>
-                        <Progress value={downloadProgress} color='primary' className='mb-1' />
+                        <Progress
+                            value={downloadProgress}
+                            color='primary'
+                            className='mb-1'
+                        />
                         <p className='text-xs text-default-500'>{downloadStatus}</p>
                     </div>
                 )}

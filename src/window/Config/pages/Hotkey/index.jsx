@@ -161,7 +161,11 @@ export default function Hotkey() {
                                     variant='flat'
                                     className={`${selectionTranslate === '' && 'hidden'}`}
                                     onPress={() => {
-                                        registerHandler('hotkey_selection_translate', selectionTranslate, oldSelectionRef);
+                                        registerHandler(
+                                            'hotkey_selection_translate',
+                                            selectionTranslate,
+                                            oldSelectionRef
+                                        );
                                     }}
                                 >
                                     {t('common.ok')}

@@ -43,15 +43,15 @@
 
 </div>
 
-| 선택 번역                                                | 입력 번역                                                                | 외부 API                                                             |
-| -------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| 번역할 텍스트를 선택하고 단축키를 누릅니다              | 단축키를 눌러 번역 창을 열고 텍스트를 입력한 후 Enter를 누릅니다         | 다른 소프트웨어에서 호출 가능, [외부 API](#외부-api) 참조             |
-| <img src="asset/eg1.gif"/>                               | <img src="asset/eg2.gif"/>                                               | <img src="asset/eg3.gif"/>                                           |
+| 선택 번역                                  | 입력 번역                                                        | 외부 API                                                  |
+| ------------------------------------------ | ---------------------------------------------------------------- | --------------------------------------------------------- |
+| 번역할 텍스트를 선택하고 단축키를 누릅니다 | 단축키를 눌러 번역 창을 열고 텍스트를 입력한 후 Enter를 누릅니다 | 다른 소프트웨어에서 호출 가능, [외부 API](#외부-api) 참조 |
+| <img src="asset/eg1.gif"/>                 | <img src="asset/eg2.gif"/>                                       | <img src="asset/eg3.gif"/>                                |
 
-| 클립보드 모니터링                                                       | 스크린샷 OCR                                         | 스크린샷 번역                                        |
-| ----------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| 번역 패널의 아이콘을 클릭하여 활성화, 텍스트를 복사하면 번역됩니다       | 단축키를 누르고 인식할 영역을 선택합니다             | 단축키를 누르고 번역할 영역을 선택합니다             |
-| <img src="asset/eg4.gif"/>                                              | <img src="asset/eg5.gif"/>                           | <img src="asset/eg6.gif"/>                           |
+| 클립보드 모니터링                                                  | 스크린샷 OCR                             | 스크린샷 번역                            |
+| ------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------- |
+| 번역 패널의 아이콘을 클릭하여 활성화, 텍스트를 복사하면 번역됩니다 | 단축키를 누르고 인식할 영역을 선택합니다 | 단축키를 누르고 번역할 영역을 선택합니다 |
+| <img src="asset/eg4.gif"/>                                         | <img src="asset/eg5.gif"/>               | <img src="asset/eg6.gif"/>               |
 
 </div>
 
@@ -137,15 +137,15 @@
 
 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 페이지에서 플랫폼에 맞는 설치 파일을 다운로드하세요:
 
-| 플랫폼 | 파일 |
-|--------|------|
-| Windows (64비트) | `pot_{version}_x64-setup.exe` |
-| Windows (32비트) | `pot_{version}_x86-setup.exe` |
-| Windows (ARM64) | `pot_{version}_arm64-setup.exe` |
-| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg` |
-| macOS (Intel) | `pot_{version}_x64.dmg` |
-| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb` |
-| Linux (AppImage) | `pot_{version}_amd64.AppImage` |
+| 플랫폼                | 파일                            |
+| --------------------- | ------------------------------- |
+| Windows (64비트)      | `pot_{version}_x64-setup.exe`   |
+| Windows (32비트)      | `pot_{version}_x86-setup.exe`   |
+| Windows (ARM64)       | `pot_{version}_arm64-setup.exe` |
+| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg`     |
+| macOS (Intel)         | `pot_{version}_x64.dmg`         |
+| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb`       |
+| Linux (AppImage)      | `pot_{version}_amd64.AppImage`  |
 
 ### 문제 해결
 
@@ -226,9 +226,9 @@ windowrulev2 = move cursor 0 0, class:(pot), title:(Translator|PopClip|Screensho
 
 ### 요구 사항
 
-- Node.js >= 18.0.0
-- pnpm >= 8.5.0
-- Rust >= 1.80.0
+-   Node.js >= 18.0.0
+-   pnpm >= 8.5.0
+-   Rust >= 1.80.0
 
 ### 단계
 

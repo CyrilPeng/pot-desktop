@@ -164,7 +164,8 @@ export function Config(props) {
                     <Dropdown>
                         <DropdownTrigger>
                             <Button variant='bordered'>
-                                {protocols.find((p) => p.key === serviceConfig.protocol)?.label || serviceConfig.protocol}
+                                {protocols.find((p) => p.key === serviceConfig.protocol)?.label ||
+                                    serviceConfig.protocol}
                             </Button>
                         </DropdownTrigger>
                         <DropdownMenu

@@ -148,15 +148,15 @@
 
 前往 [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) 页面下载对应平台的安装包：
 
-| 平台 | 文件 |
-|------|------|
-| Windows (64位) | `pot_{version}_x64-setup.exe` |
-| Windows (32位) | `pot_{version}_x86-setup.exe` |
-| Windows (ARM64) | `pot_{version}_arm64-setup.exe` |
-| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg` |
-| macOS (Intel) | `pot_{version}_x64.dmg` |
-| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb` |
-| Linux (AppImage) | `pot_{version}_amd64.AppImage` |
+| 平台                  | 文件                            |
+| --------------------- | ------------------------------- |
+| Windows (64位)        | `pot_{version}_x64-setup.exe`   |
+| Windows (32位)        | `pot_{version}_x86-setup.exe`   |
+| Windows (ARM64)       | `pot_{version}_arm64-setup.exe` |
+| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg`     |
+| macOS (Intel)         | `pot_{version}_x64.dmg`         |
+| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb`       |
+| Linux (AppImage)      | `pot_{version}_amd64.AppImage`  |
 
 ### 故障排除
 
@@ -244,9 +244,9 @@ windowrulev2 = move cursor 0 0, class:(pot), title:(Translator|PopClip|Screensho
 
 ### 环境要求
 
-- Node.js >= 18.0.0
-- pnpm >= 8.5.0
-- Rust >= 1.80.0
+-   Node.js >= 18.0.0
+-   pnpm >= 8.5.0
+-   Rust >= 1.80.0
 
 ### 开始编译
 

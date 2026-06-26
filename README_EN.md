@@ -43,15 +43,15 @@
 
 </div>
 
-| Selection Translation                                    | Input Translation                                                              | External API                                                             |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Select the text to translate and press the hotkey        | Press the hotkey to open the translation window, input text and press Enter    | Can be called by other software for more convenient features, see [External API](#external-api) |
-| <img src="asset/eg1.gif"/>                               | <img src="asset/eg2.gif"/>                                                     | <img src="asset/eg3.gif"/>                                               |
+| Selection Translation                             | Input Translation                                                           | External API                                                                                    |
+| ------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Select the text to translate and press the hotkey | Press the hotkey to open the translation window, input text and press Enter | Can be called by other software for more convenient features, see [External API](#external-api) |
+| <img src="asset/eg1.gif"/>                        | <img src="asset/eg2.gif"/>                                                  | <img src="asset/eg3.gif"/>                                                                      |
 
-| Clipboard Monitoring                                                    | Screenshot OCR                                           | Screenshot Translation                               |
-| ----------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------- |
-| Click the icon on the translation panel to enable, copy text to translate | Press the hotkey and select the area to recognize        | Press the hotkey and select the area to translate    |
-| <img src="asset/eg4.gif"/>                                              | <img src="asset/eg5.gif"/>                               | <img src="asset/eg6.gif"/>                           |
+| Clipboard Monitoring                                                      | Screenshot OCR                                    | Screenshot Translation                            |
+| ------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| Click the icon on the translation panel to enable, copy text to translate | Press the hotkey and select the area to recognize | Press the hotkey and select the area to translate |
+| <img src="asset/eg4.gif"/>                                                | <img src="asset/eg5.gif"/>                        | <img src="asset/eg6.gif"/>                        |
 
 </div>
 
@@ -142,15 +142,15 @@ Go to Preferences → Service Settings → Add External Plugin → Install Exter
 
 Download the installer for your platform from the [Release](https://github.com/CyrilPeng/pot-desktop/releases/latest) page:
 
-| Platform | File |
-|----------|------|
-| Windows (64-bit) | `pot_{version}_x64-setup.exe` |
-| Windows (32-bit) | `pot_{version}_x86-setup.exe` |
-| Windows (ARM64) | `pot_{version}_arm64-setup.exe` |
-| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg` |
-| macOS (Intel) | `pot_{version}_x64.dmg` |
-| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb` |
-| Linux (AppImage) | `pot_{version}_amd64.AppImage` |
+| Platform              | File                            |
+| --------------------- | ------------------------------- |
+| Windows (64-bit)      | `pot_{version}_x64-setup.exe`   |
+| Windows (32-bit)      | `pot_{version}_x86-setup.exe`   |
+| Windows (ARM64)       | `pot_{version}_arm64-setup.exe` |
+| macOS (Apple Silicon) | `pot_{version}_aarch64.dmg`     |
+| macOS (Intel)         | `pot_{version}_x64.dmg`         |
+| Linux (Debian/Ubuntu) | `pot_{version}_amd64.deb`       |
+| Linux (AppImage)      | `pot_{version}_amd64.AppImage`  |
 
 ### Troubleshooting
 
@@ -231,9 +231,9 @@ windowrulev2 = move cursor 0 0, class:(pot), title:(Translator|PopClip|Screensho
 
 ### Requirements
 
-- Node.js >= 18.0.0
-- pnpm >= 8.5.0
-- Rust >= 1.80.0
+-   Node.js >= 18.0.0
+-   pnpm >= 8.5.0
+-   Rust >= 1.80.0
 
 ### Steps
 

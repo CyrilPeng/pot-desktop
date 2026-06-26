@@ -11,11 +11,17 @@ async function resolveUpdater() {
     let changelog = await getChangeLog(TOKEN);
 
     const windows_x86_64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64_fix_webview2_runtime-setup.nsis.zip`;
-    const windows_x86_64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64_fix_webview2_runtime-setup.nsis.zip.sig`);
+    const windows_x86_64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x64_fix_webview2_runtime-setup.nsis.zip.sig`
+    );
     const windows_i686 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86_fix_webview2_runtime-setup.nsis.zip`;
-    const windows_i686_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86_fix_webview2_runtime-setup.nsis.zip.sig`);
+    const windows_i686_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_x86_fix_webview2_runtime-setup.nsis.zip.sig`
+    );
     const windows_aarch64 = `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64_fix_webview2_runtime-setup.nsis.zip`;
-    const windows_aarch64_sig = await getSignature(`https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64_fix_webview2_runtime-setup.nsis.zip.sig`);
+    const windows_aarch64_sig = await getSignature(
+        `https://github.com/CyrilPeng/pot-desktop/releases/download/${version}/pot_${version}_arm64_fix_webview2_runtime-setup.nsis.zip.sig`
+    );
 
     let updateData = {
         name: version,
@@ -24,7 +30,7 @@ async function resolveUpdater() {
         platforms: {
             'windows-x86_64': { signature: windows_x86_64_sig, url: windows_x86_64 },
             'windows-i686': { signature: windows_i686_sig, url: windows_i686 },
-            'windows-aarch64': { signature: windows_aarch64_sig, url: windows_aarch64 }
+            'windows-aarch64': { signature: windows_aarch64_sig, url: windows_aarch64 },
         },
     };
     fs.writeFile('./update-fix-runtime.json', JSON.stringify(updateData), (e) => {
