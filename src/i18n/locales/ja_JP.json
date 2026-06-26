@@ -154,6 +154,20 @@
                 },
                 "tencent_img_ocr": {
                     "title": "テンセント画像翻訳"
+                },
+                "ppocr": {
+                    "title": "PP-OCR ローカル認識",
+                    "model_dir": "モデルディレクトリ",
+                    "model_url": "モデルダウンロードURL",
+                    "download": "モデルをダウンロード",
+                    "downloading": "ダウンロード中",
+                    "download_complete": "モデルのダウンロード完了",
+                    "download_failed": "モデルのダウンロード失敗",
+                    "enable_cls": "方向分類を有効にする",
+                    "model_ready": "モデル準備完了",
+                    "model_not_ready": "モデル未ダウンロード",
+                    "url_required": "モデルダウンロードURLを入力してください",
+                    "det_limit": "検出最大辺長"
                 }
             },
             "tts": {

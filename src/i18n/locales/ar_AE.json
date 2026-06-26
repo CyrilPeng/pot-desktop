@@ -434,6 +434,20 @@
                 "simple_latex_ocr": {
                     "title": "لاتيك البسيط",
                     "token": "رمز"
+                },
+                "ppocr": {
+                    "title": "PP-OCR",
+                    "model_dir": "Model Directory",
+                    "model_url": "Model Download URL",
+                    "download": "Download Models",
+                    "downloading": "Downloading",
+                    "download_complete": "Models downloaded successfully",
+                    "download_failed": "Model download failed",
+                    "enable_cls": "Enable Direction Classification",
+                    "model_ready": "Models Ready",
+                    "model_not_ready": "Models not downloaded",
+                    "url_required": "Please enter model download URL",
+                    "det_limit": "Detection Max Side Length"
                 }
             }
         }

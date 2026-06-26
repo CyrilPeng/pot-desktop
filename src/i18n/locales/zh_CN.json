@@ -399,6 +399,20 @@
                 },
                 "qrcode": {
                     "title": "二维码识别"
+                },
+                "ppocr": {
+                    "title": "PP-OCR 本地识别",
+                    "model_dir": "模型目录",
+                    "model_url": "模型下载地址",
+                    "download": "下载模型",
+                    "downloading": "下载中",
+                    "download_complete": "模型下载完成",
+                    "download_failed": "模型下载失败",
+                    "enable_cls": "启用方向分类",
+                    "model_ready": "模型就绪",
+                    "model_not_ready": "模型未下载",
+                    "url_required": "请输入模型下载地址",
+                    "det_limit": "检测最大边长"
                 }
             },
             "tts": {

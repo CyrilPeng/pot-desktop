@@ -396,6 +396,20 @@
                 },
                 "qrcode": {
                     "title": "QR Code"
+                },
+                "ppocr": {
+                    "title": "PP-OCR 本地識別",
+                    "model_dir": "模型目錄",
+                    "model_url": "模型下載地址",
+                    "download": "下載模型",
+                    "downloading": "下載中",
+                    "download_complete": "模型下載完成",
+                    "download_failed": "模型下載失敗",
+                    "enable_cls": "啟用方向分類",
+                    "model_ready": "模型就緒",
+                    "model_not_ready": "模型未下載",
+                    "url_required": "請輸入模型下載地址",
+                    "det_limit": "偵測最大邊長"
                 }
             },
             "tts": {
